@@ -1,4 +1,4 @@
-package com.example.testspringboot.UrlCheckController;
+package com.example.testspringboot.controllers;
 
 import java.io.IOException;
 import java.net.HttpURLConnection;
@@ -26,10 +26,10 @@ public class UrlCheckController {
 
             int responseCode = conn.getResponseCode() / 100;
             if(responseCode/ 100 != 2 || responseCode != 3) {
-                returnMessage = siteDown;
+                returnMessage = siteUp;
             }
             else{
-                returnMessage = siteUp;
+                returnMessage = siteDown;
             }
         }
 
